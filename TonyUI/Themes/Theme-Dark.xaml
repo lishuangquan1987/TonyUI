@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--  基本背景颜色  -->
+    <SolidColorBrush x:Key="Basic.Backgound" Color="#1E1E1E">
+    </SolidColorBrush>
+    <!--  基本前景颜色  -->
+    <SolidColorBrush x:Key="Basic.Forgound" Color="#E6E6E6">
+    </SolidColorBrush>
+    <!--  基本边框颜色  -->
+    <SolidColorBrush x:Key="Basic.BorderBrush" Color="#45B035">
+    </SolidColorBrush>
+    <!--  基本主题颜色（突出颜色，比如被选中的状态）  -->
+    <SolidColorBrush x:Key="Basic.AccentColor" Color="#45B035">
+    </SolidColorBrush>
+</ResourceDictionary>
