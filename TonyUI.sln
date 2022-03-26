@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TonyUI", "TonyUI\TonyUI.csproj", "{AF8604D9-3B23-409E-BD56-6F7F93B0BACA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TonyUI.Test", "TonyUI.Test\TonyUI.Test.csproj", "{1D020CEA-0F48-4F79-BA02-010D5FD1B58D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AF8604D9-3B23-409E-BD56-6F7F93B0BACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF8604D9-3B23-409E-BD56-6F7F93B0BACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF8604D9-3B23-409E-BD56-6F7F93B0BACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D020CEA-0F48-4F79-BA02-010D5FD1B58D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D020CEA-0F48-4F79-BA02-010D5FD1B58D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D020CEA-0F48-4F79-BA02-010D5FD1B58D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D020CEA-0F48-4F79-BA02-010D5FD1B58D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
