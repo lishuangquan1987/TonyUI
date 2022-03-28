@@ -23,16 +23,8 @@ namespace TonyUI.Helpers
             Button button = (Button)sender;
             //通过Tag获取原始的背景色
             var toColor = button.Tag as SolidColorBrush;
-            Storyboard storyboard = new Storyboard();
-            ColorAnimation colorAnimation = new ColorAnimation();
-            colorAnimation.To = toColor?.Color;
-            colorAnimation.Duration = TimeSpan.FromMilliseconds(400);
 
-            Storyboard.SetTarget(colorAnimation, button);
-            Storyboard.SetTargetProperty(colorAnimation, new PropertyPath("Background.Color"));
-
-            storyboard.Children.Add(colorAnimation);
-            storyboard.Begin();
+            AnimationHelper.StartColorAnimation(button, "Background.Color", null, toColor?.Color);
         }
 
         private static void OnMouseEnter(object sender, RoutedEventArgs e)
@@ -43,19 +35,10 @@ namespace TonyUI.Helpers
             button.Tag =button.Tag?? fromColor;
 
             var toColor = button.TryFindResource("Basic.AccentColor") as SolidColorBrush;
+
             if (toColor != null)
             {
-                Storyboard storyboard = new Storyboard();
-                ColorAnimation colorAnimation = new ColorAnimation();
-                colorAnimation.From = fromColor.Color;
-                colorAnimation.To = toColor.Color;
-                colorAnimation.Duration = TimeSpan.FromMilliseconds(400);
-
-                Storyboard.SetTarget(colorAnimation, button);
-                Storyboard.SetTargetProperty(colorAnimation, new PropertyPath("Background.Color"));
-
-                storyboard.Children.Add(colorAnimation);
-                storyboard.Begin();
+                AnimationHelper.StartColorAnimation(button, "Background.Color",fromColor?.Color,toColor?.Color);
             }
 
         }

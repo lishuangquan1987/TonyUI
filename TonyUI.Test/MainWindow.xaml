@@ -15,10 +15,10 @@
                 Height="30"
                 helper:ButtonHelper.ButtonStyle="Default"
                 helper:ButtonHelper.CornerRadius="5"
+                Background="LightBlue"
                 Click="Button_Click"
                 Content="123"
                 IsEnabled="True"
-                Background="LightBlue"
                 >
 
         </Button>
