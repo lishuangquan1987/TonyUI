@@ -1,0 +1,32 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="Background">#FFFFFF</Color>
+    <Color x:Key="Foreground">#020817</Color>
+
+    <Color x:Key="Card">#FFFFFF</Color>
+    <Color x:Key="CardForeground">#020817</Color>
+
+    <Color x:Key="Popover">#FFFFFF</Color>
+    <Color x:Key="PopoverForeground">#020817</Color>
+
+    <Color x:Key="Primary">#0f172a</Color>
+    <Color x:Key="PrimaryForeground">#f8fafc</Color>
+
+    <Color x:Key="Secondary">#f1f5f9</Color>
+    <Color x:Key="SecondaryForeground">#0f172a</Color>
+
+    <Color x:Key="Muted">#f1f5f9</Color>
+    <Color x:Key="MutedForeground">#64748b</Color>
+
+    <Color x:Key="Accent">#f1f5f9</Color>
+    <Color x:Key="AccentForeground">#0f172a</Color>
+
+    <Color x:Key="Destructive">#ef4444</Color>
+    <Color x:Key="DestructiveForeground">#f8fafc</Color>
+
+    <Color x:Key="Border">#e2e8f0</Color>
+    <Color x:Key="Input">#e2e8f0</Color>
+    <Color x:Key="Ring">#0f172a</Color>
+
+</ResourceDictionary>

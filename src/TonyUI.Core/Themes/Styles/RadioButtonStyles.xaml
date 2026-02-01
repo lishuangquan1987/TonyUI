@@ -1,0 +1,59 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="RadioButtonStyle" TargetType="RadioButton">
+        <Setter Property="FontFamily" Value="{StaticResource DefaultFontFamily}" />
+        <Setter Property="FontSize" Value="{StaticResource FontSizeNormal}" />
+        <Setter Property="Foreground" Value="{StaticResource ForegroundBrush}" />
+        <Setter Property="Background" Value="{StaticResource BackgroundBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="BorderThickness" Value="{StaticResource BorderThicknessNormal}" />
+        <Setter Property="Padding" Value="8,4" />
+        <Setter Property="MinHeight" Value="20" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <StackPanel Orientation="Horizontal" SnapsToDevicePixels="True">
+                        <Grid
+                            Width="18"
+                            Height="18"
+                            VerticalAlignment="Center">
+                            <Ellipse
+                                x:Name="RadioCircle"
+                                Fill="{TemplateBinding Background}"
+                                SnapsToDevicePixels="True"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}" />
+                            <Ellipse
+                                x:Name="RadioMark"
+                                Width="8"
+                                Height="8"
+                                Fill="{StaticResource PrimaryForegroundBrush}"
+                                Visibility="Collapsed" />
+                        </Grid>
+                        <ContentPresenter
+                            x:Name="ContentPresenter"
+                            Margin="{TemplateBinding Padding}"
+                            VerticalAlignment="Center"
+                            RecognizesAccessKey="True" />
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="RadioCircle" Property="Fill" Value="{StaticResource PrimaryBrush}" />
+                            <Setter TargetName="RadioCircle" Property="Stroke" Value="{StaticResource PrimaryBrush}" />
+                            <Setter TargetName="RadioMark" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="RadioCircle" Property="Stroke" Value="{StaticResource PrimaryBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="RadioCircle" Property="Opacity" Value="0.5" />
+                            <Setter Property="Foreground" Value="{StaticResource MutedForegroundBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

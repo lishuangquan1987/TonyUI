@@ -1,0 +1,151 @@
+<UserControl x:Class="TonyUI.Demo.Components.TypographyComponent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TonyUI.Demo.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+    <ScrollViewer>
+        <StackPanel>
+            <!-- Headings -->
+            <TextBlock Text="Headings" 
+                       Style="{StaticResource Heading2Style}" 
+                       Margin="0,0,0,24" />
+            
+            <StackPanel Margin="0,0,0,32">
+                <TextBlock Text="Heading 1" Style="{StaticResource Heading1Style}" Margin="0,0,0,8" />
+                <TextBlock Text="Heading 2" Style="{StaticResource Heading2Style}" Margin="0,0,0,8" />
+                <TextBlock Text="Heading 3" Style="{StaticResource Heading3Style}" Margin="0,0,0,8" />
+                <TextBlock Text="Heading 4" Style="{StaticResource Heading4Style}" Margin="0,0,0,8" />
+            </StackPanel>
+
+            <!-- Body Text -->
+            <TextBlock Text="Body Text" 
+                       Style="{StaticResource Heading2Style}" 
+                       Margin="0,0,0,24" />
+            
+            <StackPanel Margin="0,0,0,32">
+                <TextBlock Text="This is the default body text style. It's designed to be readable and comfortable for extended reading sessions. The font size and line height are optimized for clarity." 
+                           Style="{StaticResource BodyStyle}" 
+                           TextWrapping="Wrap" 
+                           MaxWidth="600"
+                           Margin="0,0,0,8" />
+                
+                <TextBlock Text="This is smaller text, often used for secondary information or less important details." 
+                           Style="{StaticResource SmallTextStyle}" 
+                           TextWrapping="Wrap" 
+                           MaxWidth="600"
+                           Margin="0,0,0,8" />
+                
+                <TextBlock Text="This is muted text, typically used for subtle information that shouldn't draw too much attention." 
+                           Style="{StaticResource MutedTextStyle}" 
+                           TextWrapping="Wrap" 
+                           MaxWidth="600" />
+            </StackPanel>
+
+            <!-- Inline Text Elements -->
+            <TextBlock Text="Inline Text Elements" 
+                       Style="{StaticResource Heading2Style}" 
+                       Margin="0,0,0,24" />
+            
+            <StackPanel Margin="0,0,0,32">
+                <TextBlock TextWrapping="Wrap" MaxWidth="600">
+                    <Run Text="This is " /><Run Text="bold" FontWeight="Bold" /><Run Text=" text. " />
+                    <Run Text="This is " /><Run Text="italic" FontStyle="Italic" /><Run Text=" text. " />
+                    <Run Text="This is " /><Run Text="underlined" TextDecorations="Underline" /><Run Text=" text. " />
+                    <Run Text="This is " /><Run Text="strikethrough" TextDecorations="Strikethrough" /><Run Text=" text." />
+                </TextBlock>
+            </StackPanel>
+
+            <!-- Links -->
+            <TextBlock Text="Links" 
+                       Style="{StaticResource Heading2Style}" 
+                       Margin="0,0,0,24" />
+            
+            <StackPanel Margin="0,0,0,32">
+                <TextBlock>
+                    <Hyperlink NavigateUri="#" Style="{StaticResource LinkButtonStyle}">This is a link</Hyperlink>
+                    <Run Text=". You can click it to navigate somewhere." />
+                </TextBlock>
+            </StackPanel>
+
+            <!-- Blockquote -->
+            <TextBlock Text="Blockquote" 
+                       Style="{StaticResource Heading2Style}" 
+                       Margin="0,0,0,24" />
+            
+            <Border Background="{StaticResource CardBrush}"
+                    BorderBrush="{StaticResource MutedBrush}"
+                    BorderThickness="4,0,0,0"
+                    Padding="16"
+                    Margin="0,0,0,32"
+                    CornerRadius="{StaticResource CornerRadiusNormal}">
+                <TextBlock Text="The way to get started is to quit talking and begin doing. Action is the foundational key to all success."
+                           Style="{StaticResource BodyStyle}"
+                           FontStyle="Italic" />
+            </Border>
+
+            <!-- Code Blocks -->
+            <TextBlock Text="Code" 
+                       Style="{StaticResource Heading2Style}" 
+                       Margin="0,0,0,24" />
+            
+            <StackPanel Margin="0,0,0,32">
+                <TextBlock Text="Inline code: " Style="{StaticResource BodyStyle}" />
+                <TextBlock Text="console.log('Hello, world!');" 
+                           Style="{StaticResource CodeStyle}" 
+                           Background="{StaticResource MutedBrush}"
+                           Padding="4,2"
+                           Margin="0,8,0,8" />
+                
+                <TextBlock Text="Code block:" Style="{StaticResource BodyStyle}" Margin="0,0,0,8" />
+                <Border Background="{StaticResource MutedBrush}" 
+                        CornerRadius="{StaticResource CornerRadiusNormal}"
+                        Padding="12">
+                    <TextBlock>
+                        <Run Text="function greet(name) {" /><LineBreak />
+                        <Run Text="  return `Hello, ${name}!`;" /><LineBreak />
+                        <Run Text="}" /><LineBreak />
+                        <LineBreak />
+                        <Run Text="console.log(greet('World'));" />
+                    </TextBlock>
+                </Border>
+            </StackPanel>
+
+            <!-- Lists -->
+            <TextBlock Text="Lists" 
+                       Style="{StaticResource Heading2Style}" 
+                       Margin="0,0,0,24" />
+            
+            <StackPanel Margin="0,0,0,32">
+                <TextBlock Text="Ordered List:" Style="{StaticResource BodyStyle}" Margin="0,0,0,8" />
+                <TextBlock TextWrapping="Wrap" MaxWidth="600">
+                    <Run>1. First item</Run><LineBreak />
+                    <Run>2. Second item</Run><LineBreak />
+                    <Run>3. Third item</Run>
+                </TextBlock>
+                
+                <TextBlock Text="Unordered List:" Style="{StaticResource BodyStyle}" Margin="16,8,0,8" />
+                <TextBlock TextWrapping="Wrap" MaxWidth="600">
+                    <Run>• First item</Run><LineBreak />
+                    <Run>• Second item</Run><LineBreak />
+                    <Run>• Third item</Run>
+                </TextBlock>
+            </StackPanel>
+
+            <!-- Lead Text -->
+            <TextBlock Text="Lead Text" 
+                       Style="{StaticResource Heading2Style}" 
+                       Margin="0,0,0,24" />
+            
+            <TextBlock Text="This is lead text, larger and more prominent than regular body text. It's used for introductions, summaries, or to highlight important information." 
+                       FontSize="18"
+                       FontWeight="Normal"
+                       LineHeight="28"
+                       TextWrapping="Wrap" 
+                       MaxWidth="600"
+                       Foreground="{StaticResource ForegroundBrush}" />
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

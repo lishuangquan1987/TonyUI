@@ -1,0 +1,62 @@
+<UserControl x:Class="TonyUI.Demo.Components.ButtonsComponent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TonyUI.Demo.Components"
+             xmlns:helpers="clr-namespace:TonyUI.Helpers;assembly=TonyUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+    <ScrollViewer>
+        <StackPanel>
+            <!-- Using variant-based buttons -->
+            <TextBlock Text="Variant-Based Buttons" 
+                       Style="{StaticResource Heading3Style}" 
+                       Margin="0,0,0,16" />
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,32">
+                <Button Content="Default" helpers:ControlHelper.Variant="Primary" Margin="0,0,12,0" />
+                <Button Content="Primary" helpers:ControlHelper.Variant="Primary" Margin="0,0,12,0" />
+                <Button Content="Secondary" helpers:ControlHelper.Variant="Secondary" Margin="0,0,12,0" />
+                <Button Content="Destructive" helpers:ControlHelper.Variant="Destructive" Margin="0,0,12,0" />
+                <Button Content="Outline" helpers:ControlHelper.Variant="Outline" Margin="0,0,12,0" />
+                <Button Content="Ghost" helpers:ControlHelper.Variant="Ghost" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,32">
+                <Button Content="Link" helpers:ControlHelper.Variant="Link" Margin="0,0,12,0" />
+                <Button Content="Disabled" helpers:ControlHelper.Variant="Primary" IsEnabled="False" />
+            </StackPanel>
+
+            <!-- Icon Button -->
+            <TextBlock Text="Icon" 
+                       Style="{StaticResource Heading3Style}" 
+                       Margin="0,0,0,16" />
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,32">
+                <Button Content="🔍" Style="{StaticResource IconButtonStyle}" Margin="0,0,12,0" />
+                <Button Content="❤️" Style="{StaticResource IconButtonStyle}" Margin="0,0,12,0" />
+                <Button Content="⚙️" Style="{StaticResource IconButtonStyle}" />
+            </StackPanel>
+
+            <!-- Button Sizes -->
+            <TextBlock Text="Sizes" 
+                       Style="{StaticResource Heading3Style}" 
+                       Margin="0,0,0,16" />
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,32">
+                <Button Content="Small" Style="{StaticResource PrimaryButtonStyle}" 
+                        MinHeight="32" Padding="12,4" FontSize="12" Margin="0,0,12,0" />
+                <Button Content="Default" Style="{StaticResource PrimaryButtonStyle}" Margin="0,0,12,0" />
+                <Button Content="Large" Style="{StaticResource PrimaryButtonStyle}" 
+                        MinHeight="44" Padding="20,12" FontSize="16" />
+            </StackPanel>
+
+            <!-- With Loading State -->
+            <TextBlock Text="With Loading" 
+                       Style="{StaticResource Heading3Style}" 
+                       Margin="0,0,0,16" />
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="loadingButton" Style="{StaticResource PrimaryButtonStyle}" Margin="0,0,12,0" />
+                <Button Content="Success" Style="{StaticResource SecondaryButtonStyle}" />
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

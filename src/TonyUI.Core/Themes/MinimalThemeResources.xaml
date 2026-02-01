@@ -1,0 +1,271 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    
+    <!-- Define basic colors -->
+    <Color x:Key="Background">#FFFFFF</Color>
+    <Color x:Key="Foreground">#09090B</Color>
+    
+    <!-- Define additional color shades -->
+    <Color x:Key="Primary50">#FAFAFA</Color>
+    <Color x:Key="Primary100">#F4F4F5</Color>
+    <Color x:Key="Primary200">#E4E4E7</Color>
+    <Color x:Key="Primary300">#D4D4D8</Color>
+    <Color x:Key="Primary400">#A1A1AA</Color>
+    <Color x:Key="Primary500">#71717A</Color>
+    <Color x:Key="Primary600">#52525B</Color>
+    <Color x:Key="Primary700">#3F3F46</Color>
+    <Color x:Key="Primary800">#27272A</Color>
+    <Color x:Key="Primary900">#18181B</Color>
+    <Color x:Key="Primary950">#09090B</Color>
+    
+    <Color x:Key="Secondary50">#FAFAFA</Color>
+    <Color x:Key="Secondary100">#F4F4F5</Color>
+    <Color x:Key="Secondary200">#E4E4E7</Color>
+    <Color x:Key="Secondary300">#D4D4D8</Color>
+    <Color x:Key="Secondary400">#A1A1AA</Color>
+    <Color x:Key="Secondary500">#71717A</Color>
+    <Color x:Key="Secondary600">#52525B</Color>
+    <Color x:Key="Secondary700">#3F3F46</Color>
+    <Color x:Key="Secondary800">#27272A</Color>
+    <Color x:Key="Secondary900">#18181B</Color>
+    <Color x:Key="Secondary950">#09090B</Color>
+    
+    <Color x:Key="Muted50">#FAFAFA</Color>
+    <Color x:Key="Muted100">#F4F4F5</Color>
+    <Color x:Key="Muted200">#E4E4E7</Color>
+    <Color x:Key="Muted300">#D4D4D8</Color>
+    <Color x:Key="Muted400">#A1A1AA</Color>
+    <Color x:Key="Muted500">#71717A</Color>
+    <Color x:Key="Muted600">#52525B</Color>
+    <Color x:Key="Muted700">#3F3F46</Color>
+    <Color x:Key="Muted800">#27272A</Color>
+    <Color x:Key="Muted900">#18181B</Color>
+    <Color x:Key="Muted950">#09090B</Color>
+    
+    <Color x:Key="Destructive50">#FEF2F2</Color>
+    <Color x:Key="Destructive100">#FEE2E2</Color>
+    <Color x:Key="Destructive200">#FECACA</Color>
+    <Color x:Key="Destructive300">#FCA5A5</Color>
+    <Color x:Key="Destructive400">#F87171</Color>
+    <Color x:Key="Destructive500">#EF4444</Color>
+    <Color x:Key="Destructive600">#DC2626</Color>
+    <Color x:Key="Destructive700">#B91C1C</Color>
+    <Color x:Key="Destructive800">#991B1B</Color>
+    <Color x:Key="Destructive900">#7F1D1D</Color>
+    <Color x:Key="Destructive950">#450A0A</Color>
+    
+    <Color x:Key="Zinc50">#FAFAFA</Color>
+    <Color x:Key="Zinc100">#F4F4F5</Color>
+    <Color x:Key="Zinc200">#E4E4E7</Color>
+    <Color x:Key="Zinc300">#D4D4D8</Color>
+    <Color x:Key="Zinc400">#A1A1AA</Color>
+    <Color x:Key="Zinc500">#71717A</Color>
+    <Color x:Key="Zinc600">#52525B</Color>
+    <Color x:Key="Zinc700">#3F3F46</Color>
+    <Color x:Key="Zinc800">#27272A</Color>
+    <Color x:Key="Zinc900">#18181B</Color>
+    <Color x:Key="Zinc950">#09090B</Color>
+    
+    <!-- Define basic brushes -->
+    <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource Background}" />
+    <SolidColorBrush x:Key="ForegroundBrush" Color="{StaticResource Foreground}" />
+    <SolidColorBrush x:Key="CardBrush" Color="{StaticResource Background}" />
+    <SolidColorBrush x:Key="CardForegroundBrush" Color="{StaticResource Foreground}" />
+    <SolidColorBrush x:Key="PopoverBrush" Color="{StaticResource Background}" />
+    <SolidColorBrush x:Key="PopoverForegroundBrush" Color="{StaticResource Foreground}" />
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Foreground}" />
+    <SolidColorBrush x:Key="PrimaryForegroundBrush" Color="{StaticResource Background}" />
+    <SolidColorBrush x:Key="SecondaryBrush" Color="#F4F4F5" />
+    <SolidColorBrush x:Key="SecondaryForegroundBrush" Color="#18181B" />
+    <SolidColorBrush x:Key="MutedBrush" Color="#F4F4F5" />
+    <SolidColorBrush x:Key="MutedForegroundBrush" Color="#71717A" />
+    <SolidColorBrush x:Key="AccentBrush" Color="#F4F4F5" />
+    <SolidColorBrush x:Key="AccentForegroundBrush" Color="#18181B" />
+    <SolidColorBrush x:Key="DestructiveBrush" Color="#EF4444" />
+    <SolidColorBrush x:Key="DestructiveForegroundBrush" Color="#FAFAFA" />
+    <SolidColorBrush x:Key="BorderBrush" Color="#E4E4E7" />
+    <SolidColorBrush x:Key="InputBrush" Color="#E4E4E7" />
+    <SolidColorBrush x:Key="RingBrush" Color="#18181B" />
+    
+    <!-- Define basic fonts -->
+    <FontFamily x:Key="DefaultFontFamily">Segoe UI, Roboto, Helvetica, Arial, sans-serif</FontFamily>
+    
+    <!-- Define basic sizes -->
+    <sys:Double x:Key="FontSizeNormal">13</sys:Double>
+    
+    <Thickness x:Key="PaddingNormal">8</Thickness>
+    <Thickness x:Key="MarginNormal">8</Thickness>
+    
+    <CornerRadius x:Key="CornerRadiusNormal">4</CornerRadius>
+    
+    <sys:Double x:Key="BorderThicknessNormal">1</sys:Double>
+
+    <!-- Define basic text styles -->
+    <Style x:Key="Heading2Style" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource ForegroundBrush}" />
+    </Style>
+    
+    <Style x:Key="SmallTextStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Foreground" Value="{StaticResource MutedForegroundBrush}" />
+    </Style>
+    
+    <Style x:Key="LabelStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="Medium" />
+        <Setter Property="Foreground" Value="{StaticResource ForegroundBrush}" />
+    </Style>
+    
+    <Style x:Key="Heading3Style" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="{StaticResource ForegroundBrush}" />
+    </Style>
+    
+    <!-- Define basic button style for navigation -->
+    <Style x:Key="NavButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{StaticResource ForegroundBrush}" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Padding" Value="8,6" />
+        <Setter Property="Margin" Value="0,2" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="4"
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="Left"
+                                          VerticalAlignment="Center"
+                                          RecognizesAccessKey="True" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource MutedBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ActiveNavButtonStyle" TargetType="Button" BasedOn="{StaticResource NavButtonStyle}">
+        <Setter Property="Background" Value="{StaticResource SecondaryBrush}" />
+    </Style>
+    
+    <!-- ComboBox style -->
+    <Style x:Key="ComboBoxStyle" TargetType="ComboBox">
+        <Setter Property="Background" Value="{StaticResource InputBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="8,6" />
+        <Setter Property="MinHeight" Value="30" />
+    </Style>
+    
+    <!-- IconButton style -->
+    <Style x:Key="IconButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{StaticResource ForegroundBrush}" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="Padding" Value="8" />
+        <Setter Property="MinWidth" Value="36" />
+        <Setter Property="MinHeight" Value="36" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="4"
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          RecognizesAccessKey="True" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource MutedBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!-- PrimaryButtonStyle -->
+    <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource PrimaryBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource PrimaryForegroundBrush}" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="Padding" Value="16,8" />
+        <Setter Property="MinHeight" Value="36" />
+        <Setter Property="MinWidth" Value="64" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="4"
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          RecognizesAccessKey="True" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource Primary800}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{StaticResource Primary900}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.5" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!-- SecondaryButtonStyle -->
+    <Style x:Key="SecondaryButtonStyle" TargetType="Button" BasedOn="{StaticResource PrimaryButtonStyle}">
+        <Setter Property="Background" Value="{StaticResource SecondaryBrush}" />
+        <Setter Property="Foreground" Value="{StaticResource SecondaryForegroundBrush}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrush}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="4"
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"
+                                          RecognizesAccessKey="True" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{StaticResource Secondary200}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{StaticResource Secondary300}" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.5" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
