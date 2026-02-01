@@ -1,0 +1,181 @@
+<UserControl x:Class="TonyUI.Demo.Components.ContainerComponent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TonyUI.Demo.Components"
+             xmlns:helpers="clr-namespace:TonyUI.Helpers;assembly=TonyUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="1000" d:DesignWidth="1000">
+    <ScrollViewer>
+        <StackPanel Margin="20">
+            <TextBlock Text="Container Controls" FontSize="28" FontWeight="Bold" Margin="0,0,0,20"/>
+            
+            <!-- GroupBox Section -->
+            <GroupBox Header="GroupBox" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Simple GroupBox" Style="{DynamicResource H3Style}" Margin="0,0,0,10"/>
+                    <GroupBox Header="Options" Margin="0,0,0,15">
+                        <StackPanel>
+                            <CheckBox Content="Option 1" Margin="0,5"/>
+                            <CheckBox Content="Option 2" Margin="0,5"/>
+                            <CheckBox Content="Option 3" Margin="0,5"/>
+                        </StackPanel>
+                    </GroupBox>
+                    
+                    <TextBlock Text="GroupBox with Content" Style="{DynamicResource H3Style}" Margin="0,0,0,10"/>
+                    <GroupBox Header="Form Elements" Margin="0,0,0,15">
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <TextBlock Text="Name:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Margin="0,5"/>
+                            <TextBox Grid.Row="0" Grid.Column="1" Margin="10,5" Text="John Doe"/>
+                            
+                            <TextBlock Text="Email:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Margin="0,5"/>
+                            <TextBox Grid.Row="1" Grid.Column="1" Margin="10,5" Text="john@example.com"/>
+                            
+                            <TextBlock Text="Phone:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="0,5"/>
+                            <TextBox Grid.Row="2" Grid.Column="1" Margin="10,5" Text="+1 (555) 123-4567"/>
+                        </Grid>
+                    </GroupBox>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- ScrollBar Section -->
+            <GroupBox Header="ScrollBars" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <TextBlock Text="ScrollBar Examples" Style="{DynamicResource H3Style}" Margin="0,0,0,10"/>
+                    
+                    <Grid Margin="0,0,0,15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="200"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        
+                        <ScrollViewer Grid.Row="0" Grid.Column="0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+                            <StackPanel>
+                                <TextBlock Text="Line 1: This is a scrollable content area" Margin="5"/>
+                                <TextBlock Text="Line 2: When content is larger than container" Margin="5"/>
+                                <TextBlock Text="Line 3: ScrollBars will appear automatically" Margin="5"/>
+                                <TextBlock Text="Line 4: Or can be forced to always show" Margin="5"/>
+                                <TextBlock Text="Line 5: This demonstrates scrolling functionality" Margin="5"/>
+                                <TextBlock Text="Line 6: With properly styled scrollbars" Margin="5"/>
+                                <TextBlock Text="Line 7: That match the overall theme" Margin="5"/>
+                                <TextBlock Text="Line 8: Of the application" Margin="5"/>
+                                <TextBlock Text="Line 9: Providing consistent user experience" Margin="5"/>
+                                <TextBlock Text="Line 10: Across all components" Margin="5"/>
+                                <TextBlock Text="Line 11: Scroll further down to see more content" Margin="5"/>
+                                <TextBlock Text="Line 12: More content for demonstration purposes" Margin="5"/>
+                                <TextBlock Text="Line 13: Final line of scrollable content" Margin="5"/>
+                            </StackPanel>
+                        </ScrollViewer>
+                        
+                        <ScrollBar Grid.Row="0" Grid.Column="1" Orientation="Vertical" 
+                                   Value="50" Maximum="100" Margin="0,0,0,17" Width="15"/>
+                    </Grid>
+                    
+                    <TextBlock Text="Horizontal ScrollBar:" Style="{DynamicResource H3Style}" Margin="0,0,0,10"/>
+                    <ScrollBar Orientation="Horizontal" Width="400" Height="15" Value="30" Maximum="100" Margin="0,0,0,15"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Expander Section -->
+            <GroupBox Header="Expander" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Expandable Content Areas" Style="{DynamicResource H3Style}" Margin="0,0,0,10"/>
+                    
+                    <Expander Header="Basic Expander" Margin="0,0,0,10">
+                        <TextBlock Text="This content is hidden until the expander is clicked. Expanders are useful for organizing content that doesn't need to be visible at all times." TextWrapping="Wrap" Margin="20,10"/>
+                    </Expander>
+                    
+                    <Expander Header="Expander with Custom Content" IsExpanded="True" Margin="0,0,0,10">
+                        <StackPanel Margin="20,10">
+                            <TextBlock Text="This expander is expanded by default." Margin="0,0,0,10"/>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Content="Action 1" Grid.Column="0" Margin="0,0,5,0" Height="35"/>
+                                <Button Content="Action 2" Grid.Column="1" Margin="5,0,0,0" Height="35"/>
+                            </Grid>
+                        </StackPanel>
+                    </Expander>
+                    
+                    <Expander Header="Advanced Expander with Multiple Elements" Margin="0,0,0,10">
+                        <StackPanel Margin="20,10">
+                            <TextBlock Text="Complex content within an expander:" Margin="0,0,0,10"/>
+                            <CheckBox Content="Enable Feature A" Margin="0,0,0,5"/>
+                            <CheckBox Content="Enable Feature B" Margin="0,0,0,5"/>
+                            <CheckBox Content="Enable Feature C" Margin="0,0,0,10"/>
+                            <Slider Minimum="0" Maximum="100" Value="50" Margin="0,0,0,10"/>
+                            <TextBox helpers:InputHelper.Placeholder="Additional input field..." Height="35"/>
+                        </StackPanel>
+                    </Expander>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Themed Containers -->
+            <GroupBox Header="Themed Containers" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Styled Borders" Style="{DynamicResource H3Style}" Margin="0,0,0,10"/>
+                    
+                    <Border Background="{DynamicResource CardBackgroundBrush}" 
+                            BorderBrush="{DynamicResource BorderBrush}" 
+                            BorderThickness="1" 
+                            CornerRadius="8" 
+                            Padding="15" 
+                            Margin="0,0,0,15">
+                        <StackPanel>
+                            <TextBlock Text="Card-like Container" FontSize="16" FontWeight="Medium" Margin="0,0,0,5"/>
+                            <TextBlock Text="This border uses dynamic resources for background and border colors, allowing it to adapt to different themes. The corner radius gives it a modern appearance." TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+                    
+                    <Grid Margin="0,0,0,15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Border Grid.Column="0" Background="{DynamicResource SecondaryBackgroundBrush}" 
+                                BorderBrush="{DynamicResource BorderBrush}" 
+                                BorderThickness="2" 
+                                CornerRadius="12" 
+                                Padding="20" 
+                                Margin="0,0,5,0">
+                            <StackPanel>
+                                <TextBlock Text="Secondary Container" FontSize="14" FontWeight="SemiBold" Margin="0,0,0,8"/>
+                                <TextBlock Text="This container uses secondary background color with a slightly thicker border." TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Border>
+                        
+                        <Border Grid.Column="1" Background="{DynamicResource CardBackgroundBrush}" 
+                                BorderBrush="{DynamicResource PrimaryBrush}" 
+                                BorderThickness="1" 
+                                CornerRadius="6" 
+                                Padding="15" 
+                                Margin="5,0,0,0">
+                            <StackPanel>
+                                <TextBlock Text="Emphasized Container" FontSize="14" FontWeight="SemiBold" Margin="0,0,0,8"/>
+                                <TextBlock Text="This container uses primary accent color for the border." TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

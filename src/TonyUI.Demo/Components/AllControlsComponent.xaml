@@ -1,0 +1,202 @@
+<UserControl x:Class="TonyUI.Demo.Components.AllControlsComponent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TonyUI.Demo.Components"
+             xmlns:helpers="clr-namespace:TonyUI.Helpers;assembly=TonyUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="1200" d:DesignWidth="1200">
+    <ScrollViewer>
+        <StackPanel Margin="20">
+            <TextBlock Text="All Controls Showcase" FontSize="32" FontWeight="Bold" Margin="0,0,0,30"/>
+
+            <!-- Buttons Section - Demonstrating variant-based buttons -->
+            <GroupBox Header="Buttons (with Variants)" Margin="0,0,0,20">
+                <WrapPanel Orientation="Horizontal" Margin="10">
+                    <Button Content="Primary" helpers:ButtonHelper.Variant="Primary" Margin="5" Height="35" MinWidth="80"/>
+                    <Button Content="Secondary" helpers:ButtonHelper.Variant="Secondary" Margin="5" Height="35" MinWidth="80"/>
+                    <Button Content="Destructive" helpers:ButtonHelper.Variant="Destructive" Margin="5" Height="35" MinWidth="80"/>
+                    <Button Content="Outline" helpers:ButtonHelper.Variant="Outline" Margin="5" Height="35" MinWidth="80"/>
+                    <Button Content="Ghost" helpers:ButtonHelper.Variant="Ghost" Margin="5" Height="35" MinWidth="80"/>
+                    <Button Content="Link" helpers:ButtonHelper.Variant="Link" Margin="5" Height="35" MinWidth="80"/>
+                    
+                    <Button Content="Small" helpers:ButtonHelper.Size="Small" Margin="5" Height="30" MinWidth="70"/>
+                    <Button Content="Default" helpers:ButtonHelper.Size="Default" Margin="5" Height="35" MinWidth="80"/>
+                    <Button Content="Large" helpers:ButtonHelper.Size="Large" Margin="5" Height="40" MinWidth="90"/>
+                </WrapPanel>
+            </GroupBox>
+
+            <!-- TextBlock Section -->
+            <GroupBox Header="TextBlocks" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Default TextBlock" Margin="0,0,0,5"/>
+                    <TextBlock Text="Bold TextBlock" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <TextBlock Text="Italic TextBlock" FontStyle="Italic" Margin="0,0,0,5"/>
+                    <TextBlock Text="Large TextBlock" FontSize="18" FontWeight="SemiBold" Margin="0,0,0,5"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Labels Section -->
+            <GroupBox Header="Labels" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <Label Content="Default Label" Margin="0,0,0,5"/>
+                    <Label Content="Bold Label" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <Label Content="Large Label" FontSize="16" Margin="0,0,0,5"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- TextBox Section -->
+            <GroupBox Header="TextBoxes" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <TextBox helpers:InputHelper.Placeholder="Enter text here..." Margin="0,0,0,10" Height="35"/>
+                    <TextBox Text="Pre-filled text" Margin="0,0,0,10" Height="35"/>
+                    <TextBox Text="Disabled textbox" IsEnabled="False" Margin="0,0,0,10" Height="35"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- CheckBox Section -->
+            <GroupBox Header="CheckBoxes" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <CheckBox Content="Default Checkbox" Margin="0,0,0,5" Height="30"/>
+                    <CheckBox Content="Checked Checkbox" IsChecked="True" Margin="0,0,0,5" Height="30"/>
+                    <CheckBox Content="Disabled Checkbox" IsEnabled="False" Margin="0,0,0,5" Height="30"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- RadioButton Section -->
+            <GroupBox Header="RadioButtons" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <RadioButton GroupName="RadioGroup1" Content="Option 1" Margin="0,0,0,5" Height="30"/>
+                    <RadioButton GroupName="RadioGroup1" Content="Option 2" IsChecked="True" Margin="0,0,0,5" Height="30"/>
+                    <RadioButton GroupName="RadioGroup1" Content="Option 3" Margin="0,0,0,5" Height="30"/>
+                    <RadioButton GroupName="RadioGroup1" Content="Disabled Option" IsEnabled="False" Margin="0,0,0,5" Height="30"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- ComboBox Section -->
+            <GroupBox Header="ComboBoxes" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <ComboBox Width="200" Margin="0,0,0,10" Height="35">
+                        <ComboBoxItem Content="Option 1"/>
+                        <ComboBoxItem Content="Option 2"/>
+                        <ComboBoxItem Content="Option 3"/>
+                        <ComboBoxItem Content="Option 4"/>
+                    </ComboBox>
+                    <ComboBox Width="200" IsEditable="True" Text="Editable ComboBox" Margin="0,0,0,10" Height="35"/>
+                    <ComboBox Width="200" IsEnabled="False" SelectedIndex="0" Margin="0,0,0,10" Height="35">
+                        <ComboBoxItem Content="Disabled Option 1"/>
+                        <ComboBoxItem Content="Disabled Option 2"/>
+                    </ComboBox>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- ListBox Section -->
+            <GroupBox Header="ListBoxes" Margin="0,0,0,20">
+                <ListBox Width="200" Height="100" Margin="10">
+                    <ListBoxItem Content="Item 1"/>
+                    <ListBoxItem Content="Item 2"/>
+                    <ListBoxItem Content="Item 3"/>
+                    <ListBoxItem Content="Item 4"/>
+                </ListBox>
+            </GroupBox>
+
+            <!-- Sliders Section -->
+            <GroupBox Header="Sliders" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <Slider Minimum="0" Maximum="100" Value="50" Margin="0,0,0,15" Height="30"/>
+                    <Slider Minimum="0" Maximum="100" Value="75" TickFrequency="10" IsSnapToTickEnabled="True" Margin="0,0,0,15" Height="30"/>
+                    <Slider Minimum="0" Maximum="10" Value="5" TickFrequency="1" IsSnapToTickEnabled="True" Margin="0,0,0,15" Height="30"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- ProgressBar Section -->
+            <GroupBox Header="ProgressBar" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <ProgressBar Value="50" Maximum="100" Margin="0,0,0,10" Height="12"/>
+                    <ProgressBar Value="75" Maximum="100" Height="20" Margin="0,0,0,10"/>
+                    <ProgressBar IsIndeterminate="True" Height="12" Margin="0,0,0,10"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Cards Section -->
+            <GroupBox Header="Cards" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <Border Background="{DynamicResource CardBackgroundBrush}" 
+                            BorderBrush="{DynamicResource BorderBrush}" 
+                            BorderThickness="1" 
+                            CornerRadius="8" 
+                            Padding="16" 
+                            Margin="0,0,0,10">
+                        <StackPanel>
+                            <TextBlock Text="Card Title" FontSize="16" FontWeight="Medium" Margin="0,0,0,8"/>
+                            <TextBlock Text="This is a card component with some content inside. Cards are useful for organizing content in a clean, contained way." TextWrapping="Wrap"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Separators Section -->
+            <GroupBox Header="Separators" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Content above separator" Margin="0,0,0,10"/>
+                    <Separator Margin="0,5" />
+                    <TextBlock Text="Content below separator" Margin="0,10,0,0"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- ToggleButtons Section -->
+            <GroupBox Header="ToggleButtons" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <ToggleButton Content="Toggle Me" Margin="0,0,0,10" Height="35"/>
+                    <ToggleButton Content="Checked Toggle" IsChecked="True" Margin="0,0,0,10" Height="35"/>
+                    <ToggleButton Content="Disabled Toggle" IsEnabled="False" Margin="0,0,0,10" Height="35"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- GroupBoxes Section -->
+            <GroupBox Header="GroupBoxes" Margin="0,0,0,20">
+                <GroupBox Header="Inner GroupBox" Margin="10">
+                    <StackPanel>
+                        <CheckBox Content="Checkbox 1" Margin="0,5"/>
+                        <CheckBox Content="Checkbox 2" Margin="0,5"/>
+                        <CheckBox Content="Checkbox 3" Margin="0,5"/>
+                    </StackPanel>
+                </GroupBox>
+            </GroupBox>
+
+            <!-- ToolTips Section -->
+            <GroupBox Header="ToolTips" Margin="0,0,0,20">
+                <StackPanel Margin="10">
+                    <Button Content="Hover me for tooltip" Margin="0,0,0,10" Height="35">
+                        <Button.ToolTip>
+                            <ToolTip Content="This is a sample tooltip!" />
+                        </Button.ToolTip>
+                    </Button>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Borders Section -->
+            <GroupBox Header="Borders" Margin="0,0,0,20">
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <Border Background="{DynamicResource CardBackgroundBrush}" 
+                            BorderBrush="{DynamicResource BorderBrush}" 
+                            BorderThickness="1" 
+                            CornerRadius="4" 
+                            Padding="10" 
+                            Margin="0,0,10,0">
+                        <TextBlock Text="Card-like Border" />
+                    </Border>
+                    <Border Background="{DynamicResource SecondaryBackgroundBrush}" 
+                            BorderBrush="{DynamicResource BorderBrush}" 
+                            BorderThickness="2" 
+                            CornerRadius="8" 
+                            Padding="15">
+                        <TextBlock Text="Secondary Border" />
+                    </Border>
+                </StackPanel>
+            </GroupBox>
+
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

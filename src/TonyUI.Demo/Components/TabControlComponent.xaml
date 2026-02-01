@@ -1,0 +1,73 @@
+<UserControl x:Class="TonyUI.Demo.Components.TabControlComponent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TonyUI.Demo.Components"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+    <ScrollViewer>
+        <StackPanel Margin="20">
+            <!-- TabControl -->
+            <TextBlock Text="TabControl" 
+                       Style="{StaticResource Heading3Style}" 
+                       Margin="0,0,0,16" />
+            <TabControl Width="500" Height="300" Margin="0,0,0,32">
+                <TabItem Header="Home">
+                    <Grid>
+                        <TextBlock Text="Welcome to the Home tab!" 
+                                   HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center" 
+                                   FontSize="16" />
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Profile">
+                    <Grid>
+                        <TextBlock Text="User Profile Information" 
+                                   HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center" 
+                                   FontSize="16" />
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Settings">
+                    <Grid>
+                        <TextBlock Text="Application Settings" 
+                                   HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center" 
+                                   FontSize="16" />
+                    </Grid>
+                </TabItem>
+                <TabItem Header="Disabled" IsEnabled="False">
+                    <Grid>
+                        <TextBlock Text="This tab is disabled" 
+                                   HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center" 
+                                   FontSize="16" />
+                    </Grid>
+                </TabItem>
+            </TabControl>
+
+            <!-- Expander -->
+            <TextBlock Text="Expander" 
+                       Style="{StaticResource Heading3Style}" 
+                       Margin="0,0,0,16" />
+            <StackPanel Margin="0,0,0,32">
+                <Expander Header="Expandable Section 1" Margin="0,0,0,8">
+                    <TextBlock Text="This is the expanded content for section 1. You can put any content here." 
+                               TextWrapping="Wrap" 
+                               Margin="10" />
+                </Expander>
+                <Expander Header="Expandable Section 2" IsExpanded="True" Margin="0,0,0,8">
+                    <TextBlock Text="This section is expanded by default. It contains more detailed information about the topic." 
+                               TextWrapping="Wrap" 
+                               Margin="10" />
+                </Expander>
+                <Expander Header="Disabled Expander" IsEnabled="False">
+                    <TextBlock Text="This expander is disabled and cannot be toggled." 
+                               TextWrapping="Wrap" 
+                               Margin="10" />
+                </Expander>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

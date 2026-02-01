@@ -1,0 +1,117 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- 这里会动态加载颜色资源 -->
+    <!-- 颜色将在运行时由ThemeManager加载 -->
+
+    <!-- 基本画刷 - 这些引用颜色资源，会在颜色加载后生效 -->
+    <SolidColorBrush x:Key="BackgroundBrush" Color="{StaticResource Background}" />
+    <SolidColorBrush x:Key="ForegroundBrush" Color="{StaticResource Foreground}" />
+    <SolidColorBrush x:Key="CardBrush" Color="{StaticResource Card}" />
+    <SolidColorBrush x:Key="CardForegroundBrush" Color="{StaticResource CardForeground}" />
+    <SolidColorBrush x:Key="PopoverBrush" Color="{StaticResource Popover}" />
+    <SolidColorBrush x:Key="PopoverForegroundBrush" Color="{StaticResource PopoverForeground}" />
+    <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}" />
+    <SolidColorBrush x:Key="PrimaryForegroundBrush" Color="{StaticResource PrimaryForeground}" />
+    <SolidColorBrush x:Key="SecondaryBrush" Color="{StaticResource Secondary}" />
+    <SolidColorBrush x:Key="SecondaryForegroundBrush" Color="{StaticResource SecondaryForeground}" />
+    <SolidColorBrush x:Key="MutedBrush" Color="{StaticResource Muted}" />
+    <SolidColorBrush x:Key="MutedForegroundBrush" Color="{StaticResource MutedForeground}" />
+    <SolidColorBrush x:Key="AccentBrush" Color="{StaticResource Accent}" />
+    <SolidColorBrush x:Key="AccentForegroundBrush" Color="{StaticResource AccentForeground}" />
+    <SolidColorBrush x:Key="DestructiveBrush" Color="{StaticResource Destructive}" />
+    <SolidColorBrush x:Key="DestructiveForegroundBrush" Color="{StaticResource DestructiveForeground}" />
+    <SolidColorBrush x:Key="BorderBrush" Color="{StaticResource Border}" />
+    <SolidColorBrush x:Key="InputBrush" Color="{StaticResource Input}" />
+    <SolidColorBrush x:Key="RingBrush" Color="{StaticResource Ring}" />
+
+    <!-- 额外的颜色画刷 -->
+    <SolidColorBrush x:Key="Primary50Brush" Color="{StaticResource Primary50}" />
+    <SolidColorBrush x:Key="Primary100Brush" Color="{StaticResource Primary100}" />
+    <SolidColorBrush x:Key="Primary200Brush" Color="{StaticResource Primary200}" />
+    <SolidColorBrush x:Key="Primary300Brush" Color="{StaticResource Primary300}" />
+    <SolidColorBrush x:Key="Primary400Brush" Color="{StaticResource Primary400}" />
+    <SolidColorBrush x:Key="Primary500Brush" Color="{StaticResource Primary500}" />
+    <SolidColorBrush x:Key="Primary600Brush" Color="{StaticResource Primary600}" />
+    <SolidColorBrush x:Key="Primary700Brush" Color="{StaticResource Primary700}" />
+    <SolidColorBrush x:Key="Primary800Brush" Color="{StaticResource Primary800}" />
+    <SolidColorBrush x:Key="Primary900Brush" Color="{StaticResource Primary900}" />
+    <SolidColorBrush x:Key="Primary950Brush" Color="{StaticResource Primary950}" />
+    
+    <SolidColorBrush x:Key="Secondary50Brush" Color="{StaticResource Secondary50}" />
+    <SolidColorBrush x:Key="Secondary100Brush" Color="{StaticResource Secondary100}" />
+    <SolidColorBrush x:Key="Secondary200Brush" Color="{StaticResource Secondary200}" />
+    <SolidColorBrush x:Key="Secondary300Brush" Color="{StaticResource Secondary300}" />
+    <SolidColorBrush x:Key="Secondary400Brush" Color="{StaticResource Secondary400}" />
+    <SolidColorBrush x:Key="Secondary500Brush" Color="{StaticResource Secondary500}" />
+    <SolidColorBrush x:Key="Secondary600Brush" Color="{StaticResource Secondary600}" />
+    <SolidColorBrush x:Key="Secondary700Brush" Color="{StaticResource Secondary700}" />
+    <SolidColorBrush x:Key="Secondary800Brush" Color="{StaticResource Secondary800}" />
+    <SolidColorBrush x:Key="Secondary900Brush" Color="{StaticResource Secondary900}" />
+    <SolidColorBrush x:Key="Secondary950Brush" Color="{StaticResource Secondary950}" />
+    
+    <SolidColorBrush x:Key="Muted50Brush" Color="{StaticResource Muted50}" />
+    <SolidColorBrush x:Key="Muted100Brush" Color="{StaticResource Muted100}" />
+    <SolidColorBrush x:Key="Muted200Brush" Color="{StaticResource Muted200}" />
+    <SolidColorBrush x:Key="Muted300Brush" Color="{StaticResource Muted300}" />
+    <SolidColorBrush x:Key="Muted400Brush" Color="{StaticResource Muted400}" />
+    <SolidColorBrush x:Key="Muted500Brush" Color="{StaticResource Muted500}" />
+    <SolidColorBrush x:Key="Muted600Brush" Color="{StaticResource Muted600}" />
+    <SolidColorBrush x:Key="Muted700Brush" Color="{StaticResource Muted700}" />
+    <SolidColorBrush x:Key="Muted800Brush" Color="{StaticResource Muted800}" />
+    <SolidColorBrush x:Key="Muted900Brush" Color="{StaticResource Muted900}" />
+    <SolidColorBrush x:Key="Muted950Brush" Color="{StaticResource Muted950}" />
+    
+    <SolidColorBrush x:Key="Destructive50Brush" Color="{StaticResource Destructive50}" />
+    <SolidColorBrush x:Key="Destructive100Brush" Color="{StaticResource Destructive100}" />
+    <SolidColorBrush x:Key="Destructive200Brush" Color="{StaticResource Destructive200}" />
+    <SolidColorBrush x:Key="Destructive300Brush" Color="{StaticResource Destructive300}" />
+    <SolidColorBrush x:Key="Destructive400Brush" Color="{StaticResource Destructive400}" />
+    <SolidColorBrush x:Key="Destructive500Brush" Color="{StaticResource Destructive500}" />
+    <SolidColorBrush x:Key="Destructive600Brush" Color="{StaticResource Destructive600}" />
+    <SolidColorBrush x:Key="Destructive700Brush" Color="{StaticResource Destructive700}" />
+    <SolidColorBrush x:Key="Destructive800Brush" Color="{StaticResource Destructive800}" />
+    <SolidColorBrush x:Key="Destructive900Brush" Color="{StaticResource Destructive900}" />
+    <SolidColorBrush x:Key="Destructive950Brush" Color="{StaticResource Destructive950}" />
+
+    <!-- 基本字体 -->
+    <FontFamily x:Key="DefaultFontFamily">Segoe UI, Roboto, Helvetica, Arial, sans-serif</FontFamily>
+    <FontFamily x:Key="MonoFontFamily">Consolas, Courier New, monospace</FontFamily>
+
+    <!-- 基本尺寸 -->
+    <sys:Double x:Key="FontSizeSmall">11</sys:Double>
+    <sys:Double x:Key="FontSizeNormal">13</sys:Double>
+    <sys:Double x:Key="FontSizeMedium">14</sys:Double>
+    <sys:Double x:Key="FontSizeLarge">16</sys:Double>
+    <sys:Double x:Key="FontSizeXLarge">18</sys:Double>
+    <sys:Double x:Key="FontSizeXXLarge">24</sys:Double>
+    <sys:Double x:Key="FontSizeXXXLarge">30</sys:Double>
+
+    <Thickness x:Key="PaddingSmall">4</Thickness>
+    <Thickness x:Key="PaddingNormal">8</Thickness>
+    <Thickness x:Key="PaddingMedium">12</Thickness>
+    <Thickness x:Key="PaddingLarge">16</Thickness>
+    <Thickness x:Key="PaddingXLarge">24</Thickness>
+    <Thickness x:Key="PaddingXXLarge">32</Thickness>
+
+    <Thickness x:Key="MarginSmall">4</Thickness>
+    <Thickness x:Key="MarginNormal">8</Thickness>
+    <Thickness x:Key="MarginMedium">12</Thickness>
+    <Thickness x:Key="MarginLarge">16</Thickness>
+    <Thickness x:Key="MarginXLarge">24</Thickness>
+    <Thickness x:Key="MarginXXLarge">32</Thickness>
+
+    <CornerRadius x:Key="CornerRadiusSmall">2</CornerRadius>
+    <CornerRadius x:Key="CornerRadiusNormal">4</CornerRadius>
+    <CornerRadius x:Key="CornerRadiusMedium">6</CornerRadius>
+    <CornerRadius x:Key="CornerRadiusLarge">8</CornerRadius>
+    <CornerRadius x:Key="CornerRadiusXLarge">12</CornerRadius>
+    <CornerRadius x:Key="CornerRadiusFull">9999</CornerRadius>
+
+    <sys:Double x:Key="BorderThicknessSmall">0.5</sys:Double>
+    <sys:Double x:Key="BorderThicknessNormal">1</sys:Double>
+    <sys:Double x:Key="BorderThicknessMedium">1.5</sys:Double>
+    <sys:Double x:Key="BorderThicknessLarge">2</sys:Double>
+
+</ResourceDictionary>
