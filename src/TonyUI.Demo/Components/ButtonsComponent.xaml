@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TonyUI.Demo.Components"
-             xmlns:helpers="clr-namespace:TonyUI.Helpers;assembly=TonyUI"
+             xmlns:buttonHelpers="clr-namespace:TonyUI.Helpers;assembly=TonyUI"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
     <ScrollViewer>
@@ -14,17 +14,17 @@
                        Style="{StaticResource Heading3Style}" 
                        Margin="0,0,0,16" />
             <StackPanel Orientation="Horizontal" Margin="0,0,0,32">
-                <Button Content="Default" helpers:ControlHelper.Variant="Primary" Margin="0,0,12,0" />
-                <Button Content="Primary" helpers:ControlHelper.Variant="Primary" Margin="0,0,12,0" />
-                <Button Content="Secondary" helpers:ControlHelper.Variant="Secondary" Margin="0,0,12,0" />
-                <Button Content="Destructive" helpers:ControlHelper.Variant="Destructive" Margin="0,0,12,0" />
-                <Button Content="Outline" helpers:ControlHelper.Variant="Outline" Margin="0,0,12,0" />
-                <Button Content="Ghost" helpers:ControlHelper.Variant="Ghost" />
+                <Button Content="Default" buttonHelpers:ButtonHelper.Variant="Primary" Margin="0,0,12,0" />
+                <Button Content="Primary" buttonHelpers:ButtonHelper.Variant="Primary" Margin="0,0,12,0" />
+                <Button Content="Secondary" buttonHelpers:ButtonHelper.Variant="Secondary" Margin="0,0,12,0" />
+                <Button Content="Destructive" buttonHelpers:ButtonHelper.Variant="Destructive" Margin="0,0,12,0" />
+                <Button Content="Outline" buttonHelpers:ButtonHelper.Variant="Outline" Margin="0,0,12,0" />
+                <Button Content="Ghost" buttonHelpers:ButtonHelper.Variant="Ghost" />
             </StackPanel>
 
             <StackPanel Orientation="Horizontal" Margin="0,0,0,32">
-                <Button Content="Link" helpers:ControlHelper.Variant="Link" Margin="0,0,12,0" />
-                <Button Content="Disabled" helpers:ControlHelper.Variant="Primary" IsEnabled="False" />
+                <Button Content="Link" buttonHelpers:ButtonHelper.Variant="Link" Margin="0,0,12,0" />
+                <Button Content="Disabled" buttonHelpers:ButtonHelper.Variant="Primary" IsEnabled="False" />
             </StackPanel>
 
             <!-- Icon Button -->

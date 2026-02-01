@@ -36,6 +36,14 @@ public partial class MainWindow : Window
         _components.Add("Typography", new TypographyComponent());
         _components.Add("Forms", new FormsComponent());
         _components.Add("Utilities", new UtilitiesComponent());
+        _components.Add("Menu & Context", new MenuComponent());
+        _components.Add("Lists", new ListComponent());
+        _components.Add("Data Grid", new DataGridComponent());
+        _components.Add("Tabs & Expand", new TabControlComponent());
+        _components.Add("Selectors", new SelectorsComponent());
+        _components.Add("Basic Controls", new BasicComponent());
+        _components.Add("Input Controls", new InputComponent());
+        _components.Add("Containers", new ContainerComponent());
     }
 
     private void BuildNavigation()

@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TonyUI.Demo.Components"
+             xmlns:inputHelpers="clr-namespace:TonyUI.Helpers;assembly=TonyUI"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="800">
     <ScrollViewer>
@@ -24,8 +25,8 @@
                          IsEnabled="False" />
                 <TextBox Style="{StaticResource TextBoxStyle}" 
                          Width="300" 
-                         Text="With placeholder" 
-                         Tag="Enter text here..." />
+                         Text="" 
+                         inputHelpers:InputHelper.Placeholder="Enter text here..." />
             </StackPanel>
 
             <!-- PasswordBox -->

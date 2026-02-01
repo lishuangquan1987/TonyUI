@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Windows;
+using System.Windows.Media;
 
 namespace TonyUI.Managers
 {
@@ -39,7 +41,6 @@ namespace TonyUI.Managers
         public static ThemeManager Instance => _instance.Value;
 
         private ThemeType _currentTheme = ThemeType.Zinc;
-        private const string COLOR_RESOURCE_KEY = "TonyUIColors";
 
         private ThemeManager() { }
 
@@ -58,16 +59,26 @@ namespace TonyUI.Managers
             var oldTheme = _currentTheme;
             _currentTheme = themeType;
 
-            // 创建新的颜色资源字典
-            var newColorResource = new ResourceDictionary
+            // Create a URI for the theme color resource dictionary
+            var themeUri = new Uri($"pack://application:,,,/TonyUI;component/Themes/Colors/{GetThemeColorFileName(themeType)}.xaml");
+
+            // Find and replace the theme color resource dictionary
+            var existingDict = Application.Current.Resources.MergedDictionaries
+                .FirstOrDefault(d => d.Source?.ToString().Contains("/Colors/") == true); // Identify by path containing /Colors/
+
+            int insertIndex = 0;
+            if (existingDict != null)
             {
-                Source = new Uri($"/TonyUI;component/Themes/Colors/{GetThemeColorFileName(themeType)}.xaml", UriKind.Relative)
-            };
+                var index = Application.Current.Resources.MergedDictionaries.IndexOf(existingDict);
+                Application.Current.Resources.MergedDictionaries.RemoveAt(index);
+                insertIndex = index;
+            }
 
-            // 替换现有的颜色资源字典
-            ReplaceResourceDictionary(COLOR_RESOURCE_KEY, newColorResource);
+            // Load the theme color dictionary that includes only color definitions
+            var newDict = new ResourceDictionary { Source = themeUri };
+            Application.Current.Resources.MergedDictionaries.Insert(insertIndex, newDict);
 
-            // 触发主题变更事件
+            // Trigger theme change event
             OnThemeChanged?.Invoke(this, new ThemeChangedEventArgs(oldTheme, themeType));
         }
 
@@ -75,38 +86,20 @@ namespace TonyUI.Managers
         {
             return themeType switch
             {
-                ThemeType.Zinc => "Zinc",
-                ThemeType.Slate => "Slate",  // 如果有的话
-                ThemeType.Stone => "Stone",  // 如果有的话
-                ThemeType.Gray => "Gray",    // 如果有的话
-                ThemeType.Neutral => "Neutral", // 如果有的话
-                ThemeType.Red => "Red",      // 如果有的话
-                ThemeType.Rose => "Rose",    // 如果有的话
-                ThemeType.Orange => "Orange", // 如果有的话
-                ThemeType.Green => "Green",  // 如果有的话
-                ThemeType.Blue => "Blue",    // 如果有的话
-                ThemeType.Yellow => "Yellow", // 如果有的话
-                ThemeType.Violet => "Violet", // 如果有的话
-                _ => "Zinc"
+                ThemeType.Zinc => "ZincTheme",
+                ThemeType.Slate => "SlateTheme",
+                ThemeType.Stone => "StoneTheme",  
+                ThemeType.Gray => "GrayTheme",    
+                ThemeType.Neutral => "NeutralTheme", 
+                ThemeType.Red => "RedTheme",      
+                ThemeType.Rose => "RoseTheme",    
+                ThemeType.Orange => "OrangeTheme", 
+                ThemeType.Green => "GreenTheme",  
+                ThemeType.Blue => "BlueTheme",    
+                ThemeType.Yellow => "YellowTheme", 
+                ThemeType.Violet => "VioletTheme", 
+                _ => "ZincTheme"
             };
-        }
-
-        private void ReplaceResourceDictionary(string key, ResourceDictionary newDict)
-        {
-            // 移除旧的资源字典
-            var dictsToRemove = Application.Current.Resources.MergedDictionaries
-                .Where(rd => rd.Contains(key) || 
-                             rd.Source?.OriginalString.Contains("/Colors/") == true)
-                .ToList();
-
-            foreach (var dict in dictsToRemove)
-            {
-                Application.Current.Resources.MergedDictionaries.Remove(dict);
-            }
-
-            // 添加新的资源字典
-            newDict[key] = true; // 标记这个字典
-            Application.Current.Resources.MergedDictionaries.Add(newDict);
         }
 
         public event EventHandler<ThemeChangedEventArgs>? OnThemeChanged;

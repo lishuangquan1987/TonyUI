@@ -1,0 +1,36 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <!-- Orange Theme Colors -->
+    <Color x:Key="Primary50">#fff7ed</Color>
+    <Color x:Key="Primary100">#ffedd5</Color>
+    <Color x:Key="Primary200">#fed7aa</Color>
+    <Color x:Key="Primary300">#fdba74</Color>
+    <Color x:Key="Primary400">#fb923c</Color>
+    <Color x:Key="Primary500">#f97316</Color>
+    <Color x:Key="Primary600">#ea580c</Color>
+    <Color x:Key="Primary700">#c2410c</Color>
+    <Color x:Key="Primary800">#9a3412</Color>
+    <Color x:Key="Primary900">#7c2d12</Color>
+    
+    <!-- Background Colors -->
+    <Color x:Key="Background">#ffffff</Color>
+    <Color x:Key="BackgroundMuted">#fffbeb</Color>
+    <Color x:Key="BackgroundDim">#ffedd5</Color>
+    
+    <!-- Foreground Colors -->
+    <Color x:Key="Foreground">#020817</Color>
+    <Color x:Key="ForegroundSecondary">#6b7280</Color>
+    <Color x:Key="ForegroundTertiary">#9ca3af</Color>
+    
+    <!-- Border Colors -->
+    <Color x:Key="Border">#fdba74</Color>
+    <Color x:Key="BorderSecondary">#f97316</Color>
+    
+    <!-- State Colors -->
+    <Color x:Key="Success">#10b981</Color>
+    <Color x:Key="Warning">#f59e0b</Color>
+    <Color x:Key="Error">#ef4444</Color>
+    <Color x:Key="Info">#3b82f6</Color>
+    
+</ResourceDictionary>
